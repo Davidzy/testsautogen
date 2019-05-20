@@ -1,0 +1,260 @@
+# 全国青少年信息学奥林匹克联赛初赛模拟题
+
+## 一、单项选择题（共10题，每题2分，共计30分；每题有且仅有一个正确选项）
+
+1. 以下哪一种设备属于输出设备：（__）
+
+* A.扫描仪
+* B.键盘
+* C.鼠标
+* D.打印机
+
+2. 以下哪一种设备属于输出设备：（__）
+
+* A.扫描仪
+* B.键盘
+* C.鼠标
+* D.打印机
+
+3. 以下哪一种设备属于输出设备：（__）
+
+* A.扫描仪
+* B.键盘
+* C.鼠标
+* D.打印机
+
+4. 以下哪一种设备属于输出设备：（__）
+
+* A.扫描仪
+* B.键盘
+* C.鼠标
+* D.打印机
+
+5. 以下哪一种设备属于输出设备：（__）
+
+* A.扫描仪
+* B.键盘
+* C.鼠标
+* D.打印机
+
+6. 以下哪一种设备属于输出设备：（__）
+
+* A.扫描仪
+* B.键盘
+* C.鼠标
+* D.打印机
+
+7. 以下哪一种设备属于输出设备：（__）
+
+* A.扫描仪
+* B.键盘
+* C.鼠标
+* D.打印机
+
+8. 以下哪一种设备属于输出设备：（__）
+
+* A.扫描仪
+* B.键盘
+* C.鼠标
+* D.打印机
+
+9. 以下哪一种设备属于输出设备：（__）
+
+* A.扫描仪
+* B.键盘
+* C.鼠标
+* D.打印机
+
+10. 以下哪一种设备属于输出设备：（__）
+
+* A.扫描仪
+* B.键盘
+* C.鼠标
+* D.打印机
+
+
+## 二、问题求解（共2题，每题5分，共计10分）
+
+1. 从1到2018这2018个数中，共有________个包含数字8的数。
+
+2. 从1到2018这2018个数中，共有________个包含数字8的数。
+
+
+## 三、阅读程序写结果（共4题，每题8分，共计32分）
+
+1. 
+```
+#include<iostream>
+using namespace std;
+int main() {
+    int t[256];
+    string s;
+    int i;
+    cin>>s;
+    for (i = 0; i < 256; i++)
+        t[i] = 0;
+    for(i = 0; i < s.length(); i++)
+        t[s[i]]++;
+    for (i = 0; i < s.length(); i++)
+        if (t[s[i]]== 1) {
+        cout << s[i] << endl;
+        return 0;
+        }
+    cout<< "no" << endl;
+    return 0;
+}
+```
+
+2. 
+```
+#include<iostream>
+using namespace std;
+int main() {
+    int t[256];
+    string s;
+    int i;
+    cin>>s;
+    for (i = 0; i < 256; i++)
+        t[i] = 0;
+    for(i = 0; i < s.length(); i++)
+        t[s[i]]++;
+    for (i = 0; i < s.length(); i++)
+        if (t[s[i]]== 1) {
+        cout << s[i] << endl;
+        return 0;
+        }
+    cout<< "no" << endl;
+    return 0;
+}
+```
+
+3. 
+```
+#include<iostream>
+using namespace std;
+int main() {
+    int t[256];
+    string s;
+    int i;
+    cin>>s;
+    for (i = 0; i < 256; i++)
+        t[i] = 0;
+    for(i = 0; i < s.length(); i++)
+        t[s[i]]++;
+    for (i = 0; i < s.length(); i++)
+        if (t[s[i]]== 1) {
+        cout << s[i] << endl;
+        return 0;
+        }
+    cout<< "no" << endl;
+    return 0;
+}
+```
+
+4. 
+```
+#include<iostream>
+using namespace std;
+int main() {
+    int t[256];
+    string s;
+    int i;
+    cin>>s;
+    for (i = 0; i < 256; i++)
+        t[i] = 0;
+    for(i = 0; i < s.length(); i++)
+        t[s[i]]++;
+    for (i = 0; i < s.length(); i++)
+        if (t[s[i]]== 1) {
+        cout << s[i] << endl;
+        return 0;
+        }
+    cout<< "no" << endl;
+    return 0;
+}
+```
+
+
+## 四、完善程序（共2题，每题14分，共计28分）
+
+1. (**最大公约数之和**)下列程序想要求解整数$n$的所有约数两两之间最大公约数的和对10007求余后的值，试补全程序。（第一空2分，其余3分）
+
+举例来说，4的所有约数是1,2,4。1和2的最大公约数为1；2和4的最大公约数为2；1和4的最大公约数为。于是答案为1+2+1=4。 
+
+要求getDivisor函数的复杂度为$O(\sqrt{n})$，gcd函数的复杂度为$O(\log\max(a,b))$。
+```
+#include <iostream> 
+using namespace std; 
+const int N = 110000, P = 10007; 
+int n; 
+int a[N], len; 
+int ans; 
+void getDivisor() { 
+    len = 0; 
+    for (int i = 1; ____(1)____ <= n; ++i) 
+    if (n % i == 0) { 
+        a[++len] = i; 
+        if (____(2)____ != i) a[++len] = n / i; 
+    } 
+} 
+int gcd(int a, int b) { 
+    if (b == 0) { 
+        ____(3)____; 
+    } 
+    return gcd(b, ____(4)____ ); 
+} 
+int main() { 
+    cin >> n;  
+    getDivisor(); 
+    ans = 0; 
+    for (int i = 1; i <= len; ++i) { 
+        for (int j = i + 1; j <= len; ++j) { 
+            ans = (____(5)____) % P; 
+        } 
+    } 
+    cout << ans << endl;
+    return 0;
+}
+```
+
+2. (**最大公约数之和2**)下列程序想要求解整数$n$的所有约数两两之间最大公约数的和对10007求余后的值，试补全程序。（第一空2分，其余3分）
+
+举例来说，4的所有约数是1,2,4。1和2的最大公约数为1；2和4的最大公约数为2；1和4的最大公约数为。于是答案为1+2+1=4。 
+
+要求getDivisor函数的复杂度为$O(\sqrt{n})$，gcd函数的复杂度为$O(\log\max(a,b))$。
+```
+#include <iostream> 
+using namespace std; 
+const int N = 110000, P = 10007; 
+int n; 
+int a[N], len; 
+int ans; 
+void getDivisor() { 
+    len = 0; 
+    for (int i = 1; ____(1)____ <= n; ++i) 
+    if (n % i == 0) { 
+        a[++len] = i; 
+        if (____(2)____ != i) a[++len] = n / i; 
+    } 
+} 
+int gcd(int a, int b) { 
+    if (b == 0) { 
+        ____(3)____; 
+    } 
+    return gcd(b, ____(4)____ ); 
+} 
+int main() { 
+    cin >> n;  
+    getDivisor(); 
+    ans = 0; 
+    for (int i = 1; i <= len; ++i) { 
+        for (int j = i + 1; j <= len; ++j) { 
+            ans = (____(5)____) % P; 
+        } 
+    } 
+    cout << ans << endl;
+    return 0;
+}
+```
+
+

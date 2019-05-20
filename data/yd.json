@@ -1,0 +1,50 @@
+[
+    {
+        "id": "yd1",
+        "answer": "nothing",
+        "explain": "nothing",
+        "code": "#include<iostream>\nusing namespace std;\nint main() {\n    int t[256];\n    string s;\n    int i;\n    cin>>s;\n    for (i = 0; i < 256; i++)\n        t[i] = 0;\n    for(i = 0; i < s.length(); i++)\n        t[s[i]]++;\n    for (i = 0; i < s.length(); i++)\n        if (t[s[i]]== 1) {\n        cout << s[i] << endl;\n        return 0;\n        }\n    cout<< \"no\" << endl;\n    return 0;\n}"
+    },
+    {
+        "id": "yd2",
+        "answer": "nothing",
+        "explain": "nothing",
+        "code": "#include<iostream>\nusing namespace std;\nint main() {\n    int t[256];\n    string s;\n    int i;\n    cin>>s;\n    for (i = 0; i < 256; i++)\n        t[i] = 0;\n    for(i = 0; i < s.length(); i++)\n        t[s[i]]++;\n    for (i = 0; i < s.length(); i++)\n        if (t[s[i]]== 1) {\n        cout << s[i] << endl;\n        return 0;\n        }\n    cout<< \"no\" << endl;\n    return 0;\n}"
+    },
+    {
+        "id": "yd3",
+        "answer": "nothing",
+        "explain": "nothing",
+        "code": "#include<iostream>\nusing namespace std;\nint main() {\n    int t[256];\n    string s;\n    int i;\n    cin>>s;\n    for (i = 0; i < 256; i++)\n        t[i] = 0;\n    for(i = 0; i < s.length(); i++)\n        t[s[i]]++;\n    for (i = 0; i < s.length(); i++)\n        if (t[s[i]]== 1) {\n        cout << s[i] << endl;\n        return 0;\n        }\n    cout<< \"no\" << endl;\n    return 0;\n}"
+    },
+    {
+        "id": "yd4",
+        "answer": "nothing",
+        "explain": "nothing",
+        "code": "#include<iostream>\nusing namespace std;\nint main() {\n    int t[256];\n    string s;\n    int i;\n    cin>>s;\n    for (i = 0; i < 256; i++)\n        t[i] = 0;\n    for(i = 0; i < s.length(); i++)\n        t[s[i]]++;\n    for (i = 0; i < s.length(); i++)\n        if (t[s[i]]== 1) {\n        cout << s[i] << endl;\n        return 0;\n        }\n    cout<< \"no\" << endl;\n    return 0;\n}"
+    },
+    {
+        "id": "yd5",
+        "answer": "nothing",
+        "explain": "nothing",
+        "code": "#include<iostream>\nusing namespace std;\nint main() {\n    int t[256];\n    string s;\n    int i;\n    cin>>s;\n    for (i = 0; i < 256; i++)\n        t[i] = 0;\n    for(i = 0; i < s.length(); i++)\n        t[s[i]]++;\n    for (i = 0; i < s.length(); i++)\n        if (t[s[i]]== 1) {\n        cout << s[i] << endl;\n        return 0;\n        }\n    cout<< \"no\" << endl;\n    return 0;\n}"
+    },
+    {
+        "id": "yd6",
+        "answer": "nothing",
+        "explain": "nothing",
+        "code": "#include<iostream>\nusing namespace std;\nint main() {\n    int t[256];\n    string s;\n    int i;\n    cin>>s;\n    for (i = 0; i < 256; i++)\n        t[i] = 0;\n    for(i = 0; i < s.length(); i++)\n        t[s[i]]++;\n    for (i = 0; i < s.length(); i++)\n        if (t[s[i]]== 1) {\n        cout << s[i] << endl;\n        return 0;\n        }\n    cout<< \"no\" << endl;\n    return 0;\n}"
+    },
+    {
+        "id": "yd7",
+        "answer": "nothing",
+        "explain": "nothing",
+        "code": "#include<iostream>\nusing namespace std;\nint main() {\n    int t[256];\n    string s;\n    int i;\n    cin>>s;\n    for (i = 0; i < 256; i++)\n        t[i] = 0;\n    for(i = 0; i < s.length(); i++)\n        t[s[i]]++;\n    for (i = 0; i < s.length(); i++)\n        if (t[s[i]]== 1) {\n        cout << s[i] << endl;\n        return 0;\n        }\n    cout<< \"no\" << endl;\n    return 0;\n}"
+    },
+    {
+        "id": "yd8",
+        "answer": "nothing",
+        "explain": "nothing",
+        "code": "#include<iostream>\nusing namespace std;\nint main() {\n    int t[256];\n    string s;\n    int i;\n    cin>>s;\n    for (i = 0; i < 256; i++)\n        t[i] = 0;\n    for(i = 0; i < s.length(); i++)\n        t[s[i]]++;\n    for (i = 0; i < s.length(); i++)\n        if (t[s[i]]== 1) {\n        cout << s[i] << endl;\n        return 0;\n        }\n    cout<< \"no\" << endl;\n    return 0;\n}"
+    }
+]

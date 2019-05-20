@@ -1,0 +1,34 @@
+[
+    {
+        "id": "ws1",
+        "title": "最大公约数之和",
+        "content": "下列程序想要求解整数$n$的所有约数两两之间最大公约数的和对10007求余后的值，试补全程序。（第一空2分，其余3分）\n\n举例来说，4的所有约数是1,2,4。1和2的最大公约数为1；2和4的最大公约数为2；1和4的最大公约数为。于是答案为1+2+1=4。 \n\n要求getDivisor函数的复杂度为$O(\\sqrt{n})$，gcd函数的复杂度为$O(\\log\\max(a,b))$。",
+        "answer": "nothing",
+        "explain": "nothing",
+        "code": "#include <iostream> \nusing namespace std; \nconst int N = 110000, P = 10007; \nint n; \nint a[N], len; \nint ans; \nvoid getDivisor() { \n    len = 0; \n    for (int i = 1; ____(1)____ <= n; ++i) \n    if (n % i == 0) { \n        a[++len] = i; \n        if (____(2)____ != i) a[++len] = n / i; \n    } \n} \nint gcd(int a, int b) { \n    if (b == 0) { \n        ____(3)____; \n    } \n    return gcd(b, ____(4)____ ); \n} \nint main() { \n    cin >> n;  \n    getDivisor(); \n    ans = 0; \n    for (int i = 1; i <= len; ++i) { \n        for (int j = i + 1; j <= len; ++j) { \n            ans = (____(5)____) % P; \n        } \n    } \n    cout << ans << endl;\n    return 0;\n}"
+    },
+    {
+        "id": "ws2",
+        "title": "最大公约数之和2",
+        "content": "下列程序想要求解整数$n$的所有约数两两之间最大公约数的和对10007求余后的值，试补全程序。（第一空2分，其余3分）\n\n举例来说，4的所有约数是1,2,4。1和2的最大公约数为1；2和4的最大公约数为2；1和4的最大公约数为。于是答案为1+2+1=4。 \n\n要求getDivisor函数的复杂度为$O(\\sqrt{n})$，gcd函数的复杂度为$O(\\log\\max(a,b))$。",
+        "answer": "nothing",
+        "explain": "nothing",
+        "code": "#include <iostream> \nusing namespace std; \nconst int N = 110000, P = 10007; \nint n; \nint a[N], len; \nint ans; \nvoid getDivisor() { \n    len = 0; \n    for (int i = 1; ____(1)____ <= n; ++i) \n    if (n % i == 0) { \n        a[++len] = i; \n        if (____(2)____ != i) a[++len] = n / i; \n    } \n} \nint gcd(int a, int b) { \n    if (b == 0) { \n        ____(3)____; \n    } \n    return gcd(b, ____(4)____ ); \n} \nint main() { \n    cin >> n;  \n    getDivisor(); \n    ans = 0; \n    for (int i = 1; i <= len; ++i) { \n        for (int j = i + 1; j <= len; ++j) { \n            ans = (____(5)____) % P; \n        } \n    } \n    cout << ans << endl;\n    return 0;\n}"
+    },
+    {
+        "id": "ws3",
+        "title": "最大公约数之和3",
+        "content": "下列程序想要求解整数$n$的所有约数两两之间最大公约数的和对10007求余后的值，试补全程序。（第一空2分，其余3分）\n\n举例来说，4的所有约数是1,2,4。1和2的最大公约数为1；2和4的最大公约数为2；1和4的最大公约数为。于是答案为1+2+1=4。 \n\n要求getDivisor函数的复杂度为$O(\\sqrt{n})$，gcd函数的复杂度为$O(\\log\\max(a,b))$。",
+        "answer": "nothing",
+        "explain": "nothing",
+        "code": "#include <iostream> \nusing namespace std; \nconst int N = 110000, P = 10007; \nint n; \nint a[N], len; \nint ans; \nvoid getDivisor() { \n    len = 0; \n    for (int i = 1; ____(1)____ <= n; ++i) \n    if (n % i == 0) { \n        a[++len] = i; \n        if (____(2)____ != i) a[++len] = n / i; \n    } \n} \nint gcd(int a, int b) { \n    if (b == 0) { \n        ____(3)____; \n    } \n    return gcd(b, ____(4)____ ); \n} \nint main() { \n    cin >> n;  \n    getDivisor(); \n    ans = 0; \n    for (int i = 1; i <= len; ++i) { \n        for (int j = i + 1; j <= len; ++j) { \n            ans = (____(5)____) % P; \n        } \n    } \n    cout << ans << endl;\n    return 0;\n}"
+    },
+    {
+        "id": "ws4",
+        "title": "最大公约数之和4",
+        "content": "下列程序想要求解整数$n$的所有约数两两之间最大公约数的和对10007求余后的值，试补全程序。（第一空2分，其余3分）\n\n举例来说，4的所有约数是1,2,4。1和2的最大公约数为1；2和4的最大公约数为2；1和4的最大公约数为。于是答案为1+2+1=4。 \n\n要求getDivisor函数的复杂度为$O(\\sqrt{n})$，gcd函数的复杂度为$O(\\log\\max(a,b))$。",
+        "answer": "nothing",
+        "explain": "nothing",
+        "code": "#include <iostream> \nusing namespace std; \nconst int N = 110000, P = 10007; \nint n; \nint a[N], len; \nint ans; \nvoid getDivisor() { \n    len = 0; \n    for (int i = 1; ____(1)____ <= n; ++i) \n    if (n % i == 0) { \n        a[++len] = i; \n        if (____(2)____ != i) a[++len] = n / i; \n    } \n} \nint gcd(int a, int b) { \n    if (b == 0) { \n        ____(3)____; \n    } \n    return gcd(b, ____(4)____ ); \n} \nint main() { \n    cin >> n;  \n    getDivisor(); \n    ans = 0; \n    for (int i = 1; i <= len; ++i) { \n        for (int j = i + 1; j <= len; ++j) { \n            ans = (____(5)____) % P; \n        } \n    } \n    cout << ans << endl;\n    return 0;\n}"
+    }
+]
