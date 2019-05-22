@@ -1,6 +1,5 @@
 import itemTemplate as it
 import dataHandler as dh
-import sys
 from testPaper import TestPaper
 
 def load_title():
@@ -61,6 +60,9 @@ def load_fourth_section(items):
     return retstr
     
 def write_test_to_md(shijuan, data, fout):
+    #加载markdown to tex中文支持
+    cstext = it.ch_support()
+    print(cstext, file=fout)
     #加载试卷标题
     title = load_title()
     print(title, file=fout)

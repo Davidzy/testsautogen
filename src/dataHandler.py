@@ -1,10 +1,10 @@
 import json
 
 def fetch_data():
-    xzfile = '../data/xz.json'
-    tkfile = '../data/tk.json'
-    ydfile = '../data/yd.json'
-    wsfile = '../data/ws.json'
+    xzfile = '../data/xz.jsonmod'
+    tkfile = '../data/tk.jsonmod'
+    ydfile = '../data/yd.jsonmod'
+    wsfile = '../data/ws.jsonmod'
     testdata = {}
     # fetch data from json file
     with open(xzfile, 'r', encoding='utf-8') as f:
