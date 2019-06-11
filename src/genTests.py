@@ -93,5 +93,5 @@ if __name__ == '__main__':
     shijuan = []
     for paper in papers:
         shijuan.append(TestPaper(paper))
-    with open('test1.md', 'w+', encoding='utf8') as fout:
+    with open('../Doc/test1.md', 'w+', encoding='utf8') as fout:
         write_test_to_md(shijuan[0], itembank, fout)

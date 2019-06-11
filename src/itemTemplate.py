@@ -140,9 +140,9 @@ def load_first_section_item_with_answer(item, number, answer=False, explain=Fals
     if answer: #答案开关
         line = emphasize_word('答案') + ': ' # 答案：
         line += item['answer'] + '\n' #答案内容
-        retstr += line 
+        retstr += line + '\n'
     if explain: #解释开关
-        line = emphasize_word('解释') + ': \n'
+        line = emphasize_word('解释') + ': \n\n'
         retstr += line
         retstr += item['explain'] + '\n'
     return retstr
@@ -161,11 +161,11 @@ def load_second_section_item_with_answer(item, number, answer=False, explain=Fal
     if answer: #答案开关
         line = emphasize_word('答案') + ': ' # 答案：
         line += item['answer'] + '\n' #答案内容
-        retstr += line 
+        retstr += line + '\n'
     if explain: #解释开关
-        line = emphasize_word('解释') + ': \n'
+        line = emphasize_word('解释') + ': \n\n'
         retstr += line
-        retstr += item['explain'] + '\n'
+        retstr += item['explain'] + '\n\n'
     return retstr
 
 def load_third_section_item_with_answer(item, number, answer=False, explain=False):
@@ -183,9 +183,9 @@ def load_third_section_item_with_answer(item, number, answer=False, explain=Fals
     if answer: #答案开关
         line = emphasize_word('答案') + ': ' # 答案：
         line += item['answer'] + '\n' #答案内容
-        retstr += line 
+        retstr += line + '\n'
     if explain: #解释开关
-        line = emphasize_word('解释') + ': \n'
+        line = emphasize_word('解释') + ': \n\n'
         retstr += line
         retstr += item['explain'] + '\n'
     return retstr
@@ -209,9 +209,9 @@ def load_fourth_section_item_with_answer(item, number, answer=False, explain=Fal
     if answer: #答案开关
         line = emphasize_word('答案') + ': ' # 答案：
         line += item['answer'] + '\n' #答案内容
-        retstr += line 
+        retstr += line + '\n'
     if explain: #解释开关
-        line = emphasize_word('解释') + ': \n'
+        line = emphasize_word('解释') + ': \n\n'
         retstr += line
         retstr += item['explain'] + '\n'
     return retstr

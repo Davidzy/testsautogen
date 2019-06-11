@@ -2,7 +2,7 @@ import json
 
 def fetch_data():
     xzfile = '../data/xz.jsonmod'
-    tkfile = '../data/tk.jsonmod'
+    tkfile = '../data/tktcao.json'
     ydfile = '../data/yd.jsonmod'
     wsfile = '../data/ws.jsonmod'
     testdata = {}
