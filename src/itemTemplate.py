@@ -98,6 +98,11 @@ def load_third_section_item(item, number):
     code = item['code']
     fixed_code = fixcode(code)
     retstr += fixed_code + '\n'
+    if len(item['input'])>0:
+        line = "输入：" + item['input'] + '\n'
+        retstr += line
+    line = "输出：\n\n"
+    retstr += line
     return retstr
 
 
@@ -144,7 +149,7 @@ def load_first_section_item_with_answer(item, number, answer=False, explain=Fals
     if explain: #解释开关
         line = emphasize_word('解释') + ': \n\n'
         retstr += line
-        retstr += item['explain'] + '\n'
+        retstr += item['explain'] + '\n\n'
     return retstr
 
 
@@ -180,6 +185,11 @@ def load_third_section_item_with_answer(item, number, answer=False, explain=Fals
     code = item['code']
     fixed_code = fixcode(code)
     retstr += fixed_code + '\n'
+    if len(item['input'])>0:
+        line = "输入：" + item['input'] + '\n'
+        retstr += line
+    line = "输出：\n\n"
+    retstr += line
     if answer: #答案开关
         line = emphasize_word('答案') + ': ' # 答案：
         line += item['answer'] + '\n' #答案内容
@@ -187,7 +197,7 @@ def load_third_section_item_with_answer(item, number, answer=False, explain=Fals
     if explain: #解释开关
         line = emphasize_word('解释') + ': \n\n'
         retstr += line
-        retstr += item['explain'] + '\n'
+        retstr += item['explain'] + '\n\n'
     return retstr
 
 
@@ -213,5 +223,5 @@ def load_fourth_section_item_with_answer(item, number, answer=False, explain=Fal
     if explain: #解释开关
         line = emphasize_word('解释') + ': \n\n'
         retstr += line
-        retstr += item['explain'] + '\n'
+        retstr += item['explain'] + '\n\n'
     return retstr

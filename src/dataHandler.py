@@ -1,10 +1,11 @@
 import json
+import codecs
 
 def fetch_data():
-    xzfile = '../data/xz.jsonmod'
-    tkfile = '../data/tktcao.json'
-    ydfile = '../data/yd.jsonmod'
-    wsfile = '../data/ws.jsonmod'
+    xzfile = '../data/xzt.json'
+    tkfile = '../data/tkt.json'
+    ydfile = '../data/ydt.json'
+    wsfile = '../data/wst.json'
     testdata = {}
     # fetch data from json file
     with open(xzfile, 'r', encoding='utf-8') as f:
@@ -16,7 +17,8 @@ def fetch_data():
     with open(ydfile, 'r', encoding='utf-8') as f:
         ydt = json.load(f)
         testdata['ydt'] = ydt
-    with open(wsfile, 'r', encoding='utf-8') as f:
+    with codecs.open(wsfile, 'r', 'utf-8-sig') as f:  
+    # with open(wsfile, 'r', encoding='utf-8') as f:
         wst = json.load(f)
         testdata['wst'] = wst
     return testdata
@@ -56,3 +58,12 @@ def handlet4(shijuan, itembank):
         if item['id'] in idset:
             retdata.append(item)    
     return retdata
+
+
+def gen_all_items():
+    t1 = [x for x in range(1,151)]
+    t2 = [x for x in range(1,21)]
+    t3 = [x for x in range(1,41)]
+    t4 = [x for x in range(1,21)]
+    data = t1 + t2 + t3 + t4
+    return data

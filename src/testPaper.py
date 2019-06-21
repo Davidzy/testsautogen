@@ -1,5 +1,5 @@
 class TestPaper:
-    testconfig = {'t1number':0, 't2number':20, 't3number':0, 't4number':0}
+    testconfig = {'t1number':150, 't2number':20, 't3number':40, 't4number':20}
     # testconfig = {'t1number':10, 't2number':2, 't3number':4, 't4number':2}
     def __init__(self, totallist):
         self.t1list = []
@@ -47,7 +47,7 @@ class TestPaper:
 
 if __name__ == '__main__':
     papers = [
-        [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+        [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
         # [1,2,3,4,5,6,7,8,9,10,1,2,1,2,3,4,1,2],
         # [16,17,18,19,20,21,22,23,24,25,3,4,5,6,7,8,3,4]
     ]
