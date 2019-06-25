@@ -63,6 +63,10 @@ def load_first_section_item(item, number):
     content = item['content'] # description of an item
     line = str(number) + '. ' + content # 题号. 题目描述
     retstr += line + '\n\n'
+    if item['code']:
+        code = item['code']
+        fixed_code = fixcode(code)
+        retstr += fixed_code + '\n'
     options = item['options'] # options is an array of options
     cur = ord('A')
     for opt in options:
@@ -134,6 +138,13 @@ def load_first_section_item_with_answer(item, number, answer=False, explain=Fals
     content = item['content'] # description of an item
     line = str(number) + '. ' + content # 题号. 题目描述
     retstr += line + '\n\n'
+    try:
+        if item['code']:
+            code = item['code']
+            fixed_code = fixcode(code)
+            retstr += fixed_code + '\n'
+    except KeyError:
+        print(item)
     options = item['options'] # options is an array of options
     cur = ord('A')
     for opt in options:
