@@ -63,10 +63,13 @@ def load_first_section_item(item, number):
     content = item['content'] # description of an item
     line = str(number) + '. ' + content # 题号. 题目描述
     retstr += line + '\n\n'
-    if item['code']:
-        code = item['code']
-        fixed_code = fixcode(code)
-        retstr += fixed_code + '\n'
+    try:
+        if item['code']:
+            code = item['code']
+            fixed_code = fixcode(code)
+            retstr += fixed_code + '\n'
+    except KeyError:
+        print(item)
     options = item['options'] # options is an array of options
     cur = ord('A')
     for opt in options:
@@ -102,7 +105,7 @@ def load_third_section_item(item, number):
     code = item['code']
     fixed_code = fixcode(code)
     retstr += fixed_code + '\n'
-    if len(item['input'])>0:
+    if item['input']:
         line = "输入：" + item['input'] + '\n'
         retstr += line
     line = "输出：\n\n"
@@ -145,22 +148,26 @@ def load_first_section_item_with_answer(item, number, answer=False, explain=Fals
             retstr += fixed_code + '\n'
     except KeyError:
         print(item)
-    options = item['options'] # options is an array of options
-    cur = ord('A')
-    for opt in options:
-        # * unordered list + option + dot + option description
-        line = '* ' + chr(cur) + '.' + opt # 选项
-        retstr += line + '\n'
-        cur += 1
-    retstr += '\n'
-    if answer: #答案开关
-        line = emphasize_word('答案') + ': ' # 答案：
-        line += item['answer'] + '\n' #答案内容
-        retstr += line + '\n'
-    if explain: #解释开关
-        line = emphasize_word('解释') + ': \n\n'
-        retstr += line
-        retstr += item['explain'] + '\n\n'
+    options = []
+    try:
+        options = item['options'] # options is an array of options
+        cur = ord('A')
+        for opt in options:
+            # * unordered list + option + dot + option description
+            line = '* ' + chr(cur) + '.' + opt # 选项
+            retstr += line + '\n'
+            cur += 1
+        retstr += '\n'
+        if answer: #答案开关
+            line = emphasize_word('答案') + ': ' # 答案：
+            line += item['answer'] + '\n' #答案内容
+            retstr += line + '\n'
+        if explain: #解释开关
+            line = emphasize_word('解释') + ': \n\n'
+            retstr += line
+            retstr += item['explain'] + '\n\n'
+    except KeyError:
+        print(item)
     return retstr
 
 
@@ -196,7 +203,7 @@ def load_third_section_item_with_answer(item, number, answer=False, explain=Fals
     code = item['code']
     fixed_code = fixcode(code)
     retstr += fixed_code + '\n'
-    if len(item['input'])>0:
+    if item['input']:
         line = "输入：" + item['input'] + '\n'
         retstr += line
     line = "输出：\n\n"

@@ -1,6 +1,7 @@
 import itemTemplate as it
 import dataHandler as dh
 from testPaper import TestPaper
+from testPaper import papers_list
 
 def load_title():
     title = it.load_title()
@@ -85,13 +86,13 @@ def write_test_to_md(shijuan, data, fout):
 
 
 if __name__ == '__main__':
-    papers = [
-        [1,2,3,4,5,6,7,8,9,10,1,2,1,2,3,4,1,2],
-        [16,17,18,19,20,21,22,23,24,25,3,4,5,6,7,8,3,4]
-    ]
+    papers = papers_list
     itembank = dh.fetch_data()
     shijuan = []
+    count = 1
     for paper in papers:
         shijuan.append(TestPaper(paper))
-    with open('../Doc/test1.md', 'w+', encoding='utf8') as fout:
-        write_test_to_md(shijuan[0], itembank, fout)
+        filename = '../Doc/moniti'+str(count)+'.md'
+        with open(filename, 'w+', encoding='utf8') as fout:
+            write_test_to_md(shijuan[count-1], itembank, fout)
+        count+=1
