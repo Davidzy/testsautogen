@@ -206,7 +206,7 @@
 	"hard": "2",
 	"input": null,
 	"answer": "9\n",
-	"explain": "先将字符串改写为回文串，然后判断回文，输出i-j的值。i=9,j=0",
+	"explain": "先将字符串改写为回文串，然后判断回文，输出i-j的值。i=8,j=-1",
 	"code": "#include <iostream> \nusing namespace std; \nint main() { \n    string s=\"shanghai\";\n int m,i,j;\n m=s.size();\n for(int i=0;i<m/2;i++)\n  if(s[i]>s[m-1-i]) s[i]=s[m-1-i];\n  else s[m-1-i] = s[i];\n    i=0;j=m-1;\n    while(s[i]==s[j]&&j>=0) i++,j--;\n cout<<i-j; \n    return 0; \n} \n \n"
 }, {
 	"id": "yd31",
@@ -270,7 +270,7 @@
 	"input": "7\n",
 	"answer": "0 1 2 4 6 3 5 \n",
 	"explain": "图的广度优先遍历",
-	"code": "#include<iostream>\nusing namespace std;\nconst int N=105;\nint n;\nbool g[N][N], vst[N]; \nint d[N],h,t,x;\nvoid dfs(int p) {\n vst[p]=1;\n cout<<p<<\" \";\n for(int q=0; q<n; q++) {\n  if(g[p][q] && !vst[q])\n   dfs(q);\n }\n}\nint main(){\n cin>>n;\n for(int i=0;i<n;i++)\n  for(int j=0;j<n;j++)\n   if(i%2==j%2) g[i][j]=1; \n g[0][1]=1;\n d[t++]=0; vst[0]=1;\n while(h<t) {\n  x=d[h++];\n  cout<<x<<\" \";\n  for(int j=0;j<n;j++) \n   if(!vst[j]&&g[x][j]) {\n    vst[j]=1;\n    d[t++]=j;\n   }\n }\n return 0;\n}\n"
+	"code": "#include<iostream>\nusing namespace std;\nconst int N=105;\nint n;\nbool g[N][N], vst[N]; \nint d[N],h,t,x;\nint main(){\n cin>>n;\n for(int i=0;i<n;i++)\n  for(int j=0;j<n;j++)\n   if(i%2==j%2) g[i][j]=1; \n g[0][1]=1;\n d[t++]=0; vst[0]=1;\n while(h<t) {\n  x=d[h++];\n  cout<<x<<\" \";\n  for(int j=0;j<n;j++) \n   if(!vst[j]&&g[x][j]) {\n    vst[j]=1;\n    d[t++]=j;\n   }\n }\n return 0;\n}\n"
 }, {
 	"id": "yd40",
 	"hard": "3",

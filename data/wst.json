@@ -59,7 +59,7 @@
         "id": "ws8",
         "title": "中位数",
         "content": "给定n（n为奇数且小于1000）个整数，整数的范围在0~m（0 < m < 2^31）之间，请使用二分法求这n个整数的中位数。所谓中位数，是指将这n个数排序之后，排在正中间的数。（第五空2分，其余3分）",
-        "answer": "(1) lbound <rbound 或 rbound >lbound\n(2) count=0\n(3) x[i]>mid 或 mid<x[i]\n(4) count=count+1 或 count++ 或 ++count\n(5) rbound =mid",
+        "answer": "(1) lbound<rbound 或 rbound>lbound\n(2) count=0\n(3) x[i]>mid 或 mid<x[i]\n(4) count=count+1 或 count++ 或 ++count\n(5) rbound =mid",
         "explain": "思路：二分法。中位数的性质就是有n/2个数比它小，有n/2个数比它大(n为奇数)。因此这里二分统计多少个数比mid小。\n(1) lbound <rbound 或 rbound >lbound 判断区间是否小于2\n(2) count=0 从count>n/2知道count计算小于mid的个数\n(3) x[i]>mid 或 mid<x[i] 判断小于mid\n(4) count=count+1 或 count++ 或 ++count 计数加一\n(5) rbound =mid 因为这里count 可能等于n/2，所以不能减一",
         "code": "#include <iostream>\nusing namespace std;\nconst int MAXN = 1000;\nint n, i, lbound, rbound, mid, m, count;\nint x[MAXN];\nint main()\n{\n    cin >>n >> m;\n    for (i = 0; i < n; i++)\n        cin >> x[i];\n    lbound= 0;\n    rbound= m;\n    while (____(1)____ ) {\n        mid = (lbound+ rbound) / 2;\n        ____(2)____ ;\n        for (i = 0; i < n; i++)\n            if (____(3)____ )\n                ____(4)____ ;\n        if (count > n / 2)\n            lbound= mid + 1;\n        else\n            ____(5)____ ;\n    }\n    cout << rbound<< endl;\n    return 0;\n}\n"
     },
@@ -154,9 +154,9 @@
     {
         "id": "ws20",
         "title": "国王放置",
-        "content": "在n\\*m的棋盘上放置k个国王，要求k个国王互相不攻击，有多少种不同的放置方法。假设国王放置在第(x,y)格，国王的攻击的区域是:(x-1,y-1), (x-1,y),(x-1,y+1),(x,y-1),(x,y+1),(x+1,y-1),(x+1,y),(x+1,y+1)。读入三个数n,m,k，输出答案。题目利用回溯法求解。棋盘行标号为0~n-1，列标号为0~m-1。",
-        "answer": "(1) 0\n(2) hash[i][j]++ 或者 hash[i][j]= hash[i][j]+1 或者 ++hash[i][j]\n(3) work(x,y,tot+1)\n(4) hash[i][j]-- 或者 hash[i][j]= hash[i][j]-1 或者--hash[i][j]\n(5) work(0,0,0)",
-        "explain": "思路：深度搜索。每一步枚举一个可以放置国王的位置，然后继续放下一个国王，当放置完最后一个国王，则搜索完毕。具体操作为使用work(x,y,tot)表示已放置tot个国王，下一国王搜索起点为(x,y)。因此：\n1)当tot==k，次数+1, 返回\n2)枚举(x,y)之后所有节点，如果可以放置，放置并记录冲突，继续放置下一个国王。记得返回要处理已填入的冲突。\n(1) 0 处理换行\n(2) hash[i][j]++ 或者 hash[i][j]= hash[i][j]+1 或者 ++hash[i][j] 冲突计数+1，不能够直接设置为1，因为可能有多个冲突。\n(3) work(x,y,tot+1) 继续放置下一个国王\n(4) hash[i][j]-- 或者 hash[i][j]= hash[i][j]-1 或者--hash[i][j] 消除当前国王的冲突\n(5) work(0,0,0) 初始位置为(0,0),已放入0个国王",
+        "content": "在n\\*m的棋盘上放置k个国王，要求k个国王互相不攻击，有多少种不同的放置方法。假设国王放置在第(x,y)格，国王的攻击的区域是:(x-1,y-1), (x-1,y),(x-1,y+1),(x,y-1),(x,y+1),(x+1,y-1),(x+1,y),(x+1,y+1)。读入三个数n,m,k，输出答案。题目利用回溯法求解。棋盘行标号为0\\~n-1，列标号为0\\~m-1。",
+        "answer": "(1) 0\n(2) hash[i][j]++ 或者 hash[i][j]= hash[i][j]+1 或者 ++hash[i][j]\n(3) work(x,y,tot+1)\n(4) hash[i][j]- - 或者 hash[i][j]= hash[i][j]-1 或者--hash[i][j]\n(5) work(0,0,0)",
+        "explain": "思路：深度搜索。每一步枚举一个可以放置国王的位置，然后继续放下一个国王，当放置完最后一个国王，则搜索完毕。具体操作为使用work(x,y,tot)表示已放置tot个国王，下一国王搜索起点为(x,y)。因此：\n1)当tot==k，次数+1, 返回\n2)枚举(x,y)之后所有节点，如果可以放置，放置并记录冲突，继续放置下一个国王。记得返回要处理已填入的冲突。\n(1) 0 处理换行\n(2) hash[i][j]++ 或者 hash[i][j]= hash[i][j]+1 或者 ++hash[i][j] 冲突计数+1，不能够直接设置为1，因为可能有多个冲突。\n(3) work(x,y,tot+1) 继续放置下一个国王\n(4) hash[i][j]- - 或者 hash[i][j]= hash[i][j]-1 或者- -hash[i][j] 消除当前国王的冲突\n(5) work(0,0,0) 初始位置为(0,0),已放入0个国王",
         "code": "#include <iostream>\nusing namespace std;\n\nint n,m,k,ans;\nint hash[5][5];\nvoid work(int x,int y,int tot)\n{\n    int i,j;\n    if (tot==k) {\n        ans++;\n        return;\n    }\n    do {\n        while (hash[x][y]) {\n            y++;\n            if (y==m) {\n                x++;\n                y=____(1)____;\n            }\n            if (x==n)\n                return;\n        }\n        for (i=x-1; i<=x+1; i++)\n            if (i>=0&&i<n)\n                for (j=y-1; j<=y+1; j++)\n                    if (j>=0&&j<m)\n                        ____(2)____;\n        ____(3)____;\n        for (i=x-1; i<=x+1; i++)\n            if (i>=0&&i<n)\n                for (j=y-1; j<=y+1; j++)\n                    if (j>=0&&j<m)\n                        ____(4)____;\n        y++;\n        if (y==m) {\n            x++;\n            y=0;\n        }\n        if (x==n)\n            return;\n    } while (1);\n}\nint main()\n{\n    cin >> n >> m >> k;\n    ans=0;\n    memset(hash,0,sizeof(hash));\n    ____(5)____;\n    cout << ans << endl;\n    return 0;\n}\n\n"
     }
 ]

@@ -36,7 +36,7 @@
             "((A$\\bigwedge$B)$\\bigvee$C)$\\bigwedge$D"
         ],
         "answer": "A",
-        "explain": "A$\\bigwedge$B=false,C$\\bigwedge$D=flase,所以A,C项为假;B$\\bigvee$C=false,A(B$\\bigvee$C)=false;(A$\\bigwedge$B)$\\bigvee$C=false。"
+        "explain": "A$\\bigwedge$B=false,C$\\bigwedge$D=flase,所以A,C项为假;B$\\bigvee$C=false,A$\\bigwedge$(B$\\bigvee$C)=false;(A$\\bigwedge$B)$\\bigvee$C=false。"
     },
     {
         "id": "xz4",
@@ -157,7 +157,7 @@
     },
     {
         "id": "xz13",
-        "content": "A,B,C,D,E,F6个排成一排。F没排在最后，而且他和最后一个人之间还有两个人；E不是最后一个；在A的前面至少还有四个人，但他没有排在最后；D没有排在第一位，但他前后至少都有两个人；C没排在最前面也没排在最后。请问F排在第几位(__)？",
+        "content": "A,B,C,D,E,F6个排成一排。F没排在最后，而且他和最后一个人之间还有两个人；E不是最后一个；在A的前面至少还有四个人，但他没有排在最后；D没有排在第一位，但他前后至少都有两个人；C没排在最前面也没排在最后。请问C排在第几位(__)？",
         "code": null,
         "options": [
             "2",
@@ -165,7 +165,7 @@
             "4",
             "5"
         ],
-        "answer": "B",
+        "answer": "A",
         "explain": "ECFDAB。"
     },
     {
@@ -404,7 +404,7 @@
     },
     {
         "id": "xz32",
-        "content": "下列的哪个选项(__)可以正确用来表示八进制值8。",
+        "content": "下列的哪个选项(__)可以正确用来表示十进制值8。",
         "code": null,
         "options": [
             "0x18",
@@ -483,7 +483,7 @@
     {
         "id": "xz38",
         "content": "设循环队列的结构如下。\n若一个 Queue 类型的队列 Q,试问判断队列满的条件应是下列哪一个语句(__)。",
-        "code": "const int Maxsize=100; typedef int Data Type; typedef struct {\n     Data Type data[Maxsize]; \n     int front, rear; \n}Queue; ",
+        "code": "const int Maxsize=100;\n typedef int DataType;\n typedef struct {\n     DataType data[Maxsize]; \n     int front, rear; \n}Queue; ",
         "options": [
             "Q.front==Q.rear;",
             "Q.front-Q.rear==Maxsize;",
@@ -612,7 +612,7 @@
     },
     {
         "id": "xz48",
-        "content": "下列描述中，正确的一条是(__)。",
+        "content": "下列描述中，错误的一项是(__)。",
         "code": null,
         "options": [
             "关系表达式的值是一个逻辑值，即“真”或“假”，可以赋给一个逻辑变量",
@@ -620,7 +620,7 @@
             "设a=3、b=4、c=5，则表达式!(x=a)&&(y=b)&&0的值为0",
             "一个数组的各个数组元素可属于不同的数据类型"
         ],
-        "answer": "A",
+        "answer": "D",
         "explain": "数组的所有元素的类型必须是相同的。"
     },
     {
@@ -703,7 +703,7 @@
     },
     {
         "id": "xz55",
-        "content": "在一个图中，所有顶点的度数之和等于图的边数的(__)倍。",
+        "content": "在一个无向图中，所有顶点的度数之和等于图的边数的(__)倍。",
         "code": null,
         "options": [
             "1/2",
@@ -1101,7 +1101,7 @@
         "options": [
             "图由顶点和边的集合组成",
             "有向图中不允许存在没有边或边连接的顶点存在",
-            "图中所有顶点的度之和为边的数量的两倍",
+            "无向图中所有顶点的度之和为边的数量的两倍",
             "邻接表是图的一种链式存储结构"
         ],
         "answer": "B",
@@ -1468,7 +1468,7 @@
             "(int\\*)&a+1",
             "(int\\*)((char\\*)&a+sizeof(int))"
         ],
-        "answer": "D",
+        "answer": "A",
         "explain": "A选项，a+1为地址加4，这里相当于地址加了16。"
     },
     {
@@ -1525,7 +1525,7 @@
     },
     {
         "id": "xz118",
-        "content": "在区间[-2,2]里任取2个实数,它们的平方和>1的概率是大约是(__)。",
+        "content": "在区间[-2,2]里任取2个整数,它们的平方和>1的概率是大约是(__)。",
         "code": null,
         "options": [
             "84%",
@@ -1672,12 +1672,12 @@
         "code": null,
         "options": [
             "-+eac/b\\*fd、ab+d\\*c-ef/",
-            "-+eac/b\\*fd、ba+d\\*c-ef/",
+            "-+eac/b\\*fd、bad+\\*c-ef/",
             "-+eacf/b\\*d、ab+d\\*c-fe/",
             "-+eacf/b\\*d、ba+d\\*c-fe/"
         ],
         "answer": "A",
-        "explain": "见图。"
+        "explain": "见图"
     },
     {
         "id": "xz130",
@@ -1867,7 +1867,7 @@
         "content": "关于二叉树，下面说法错误的是(__)？",
         "code": null,
         "options": [
-            "对于N个节点的二叉树，其高度为[log2N]+1 ",
+            "对于N个节点的二叉树，其高度至少为log~2~N+1",
             "一个具有1025个节点的二叉树，其高度范围在11~1025之间",
             "二叉树的先序遍历是EFHIGJK，中序遍历为HFIEJKG，该二叉树的右子树的根为G",
             "二叉树中至少有一个节点的度为2"
@@ -1951,6 +1951,6 @@
             "老鼠D"
         ],
         "answer": "A",
-        "explain": "假设A是真话，那么B,C,D是假话（成立）。 假设B是真话，那么D是真话（不成立）。 假设C是真话，那么D是真话（不成立）。 假设D是真话，那么B是真话（不成立）。"
+        "explain": "假设A是真话，那么B,C,D是假话（成立）。 假设B是真话，那么D是真话（不成立）。 假设C是真话，那么D是真话（不成立）。 假设D是真话，ABC偷奶酪，D没偷，也可以。但是D的原话是有些人没偷，而不是说自己没偷，应该暗含D偷了，有些人指ABC。那么B是真话（不成立）。"
     }
 ]
