@@ -68,8 +68,18 @@ def gen_batch_tests(num_of_tests=5):
     for i in range(num_of_tests):
         ids[i].append(picked1.pop())
         ids[i].append(picked2.pop())
-    for i in range(num_of_tests):
-        print(ids[i])
+    # for i in range(num_of_tests):
+    #     print(ids[i])
     return ids
 
-ids = gen_batch_tests(5)
+def gen_all_classes(num_of_classes = 1):
+    data = []
+    for i in range(num_of_classes):
+        ids = gen_batch_tests(5)
+        data += ids
+    return data
+
+if __name__ == '__main__':
+    tests = gen_all_classes(6)
+    for item in tests:
+        print(item, end=",\n")
