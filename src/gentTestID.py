@@ -1,6 +1,6 @@
 import random
 
-random.seed(100)
+random.seed(300)
 
 def listxzt():
     #选择题是一个15*10的二维数组，
@@ -75,11 +75,11 @@ def gen_batch_tests(num_of_tests=5):
 def gen_all_classes(num_of_classes = 1):
     data = []
     for i in range(num_of_classes):
-        ids = gen_batch_tests(5)
+        ids = gen_batch_tests(10)
         data += ids
     return data
 
 if __name__ == '__main__':
-    tests = gen_all_classes(6)
+    tests = gen_all_classes(1)
     for item in tests:
         print(item, end=",\n")
